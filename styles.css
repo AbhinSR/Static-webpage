@@ -1,0 +1,739 @@
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+header .buttons a {
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+  background: #007bff;
+}
+
+header .buttons .join {
+  background: #28a745;
+}
+
+header .buttons a:hover {
+  opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #B2E3FF;
+}
+
+.hero .text {
+  max-width: 50%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.hero .buttons a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.hero .quote {
+  background: #007bff;
+}
+
+.hero .learn {
+  background: #28a745;
+}
+
+/* Cards Section */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  text-align: center;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #ADD8E6; /* Light blue shade on hover */
+}
+
+/* Second Page: Packages Section */
+.packages {
+  display: flex; /* Align items side-by-side in a row */
+  flex-direction: row; /* Keep image and text in one line */
+  justify-content: space-between; /* Add spacing between the image and text */
+  align-items: center; /* Vertically align items */
+  padding: 40px 20px; /* Add padding around the section */
+  gap: 30px; /* Add a gap between the image and text */
+}
+
+.packages .image-container {
+  flex: 1; /* Allow image container to take proportional space */
+  display: flex; /* Center the image within its container */
+  justify-content: center;
+  align-items: center;
+}
+
+.packages .image-container img {
+  width: 508px; /* Set specific width */
+  height: 485px; /* Set specific height */
+  object-fit: cover; /* Maintain aspect ratio */
+  gap: 30px
+}
+
+.packages .text-container {
+  flex: 1; /* Allow text container to take proportional space */
+}
+
+.packages .text-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.packages .text-container p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.packages .text-container .learn-more {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.packages .text-container .learn-more:hover {
+  color: #0056b3;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .packages {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center;
+  }
+
+  .packages .image-container img {
+    width: auto; /* Scale image dynamically */
+    height: auto;
+  }
+
+  .packages .text-container {
+    text-align: center; /* Center-align text on smaller screens */
+  }
+}
+
+/* Third Page: Education Section */
+.education header {
+  text-align: center;
+  padding: 20px;
+}
+
+.courses {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  width: 100%; /* Ensure courses container takes full width */
+}
+
+.courses-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow cards to wrap onto new lines */
+  gap: 20px;
+  padding: 20px;
+  width: 100%; /* Ensure no overflow */
+  box-sizing: border-box; /* Prevent width overflow due to padding */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.course-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 240px;
+  max-width: 100%;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  transition: background-color 0.3s ease;/* Smooth hover effect*/
+  box-sizing: border-box;/*Include padding in width calculation*/
+}
+
+.course-card:hover {
+  background-color: #e6f7ff; /* Light blue shade on hover */
+}
+/* Make sure card content fits in all screen sizes */
+.course-card img {
+  max-width: 100%; /* Ensure image doesn't overflow card */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Ensure the course cards don't exceed their container's width */
+.course-card {
+  flex: 1 1 240px; /* Allow the cards to grow and shrink but remain at least 240px */
+  min-width: 240px; /* Ensure a minimum width */
+}
+
+.course-card .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff4d4d;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.course-card img {
+  width: 240px; /* Ensures image width is 240px */
+  height: 300px; /* Ensures image height is 300px */
+  border-radius: 5px;
+}
+
+.course-card .details {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.course-card .price {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.course-card button {
+  background: white;
+  color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 37px;
+  cursor: pointer;
+}
+
+.course-card button:hover {
+  background: lightblue; /* light blue on button hover */
+}
+
+/* Courses Row Styles */
+.courses-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.course-card:hover {
+  background-color: #e6f7ff; /* Light blue shade on hover */
+}
+
+/* Fourth Page: Learning Paths Section */
+.learning-paths {
+  padding: 40px 20px;
+  background-color: #f4faff;
+}
+
+.learning-paths header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.learning-paths header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.learning-paths header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.learning-paths .paths-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.learning-path {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  max-width: 100%;
+  text-align: center;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.learning-path:hover {
+  background-color: #e6f7ff; /* Light blue shade on hover */
+}
+
+.learning-path img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.learning-path h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.learning-path p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.learning-path .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.learning-path .price {
+  font-weight: bold;
+  color: #28a745;
+}
+
+.learning-path button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.learning-path button:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design for Fourth Page */
+@media (max-width: 768px) {
+  .learning-paths .paths-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .learning-path {
+    width: 90%; /* Adjust card width on smaller screens */
+  }
+}
+
+/* Fourth Page: Pricing Section */
+.pricing-section {
+  padding: 50px 20px;
+  background-color: #f4faff;
+  text-align: center;
+}
+
+.pricing-section header {
+  margin-bottom: 30px;
+}
+
+.pricing-section header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.pricing-section header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Add horizontal scrolling for overflow */
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  width: 300px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.pricing-card .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff7f50;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+}
+
+.pricing-card h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin: 10px 0;
+}
+
+.pricing-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.pricing-card .features {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.pricing-card .features li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.pricing-card .features li i {
+  color: #28a745;
+  margin-right: 10px;
+}
+
+.pricing-card .cta-button {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.pricing-card .cta-button:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design for Pricing Section */
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 90%; /* Adjust card width on smaller screens */
+  }
+}
+/* Add this to your existing style.css */
+.new-badge {
+  position: absolute; /* Position it relative to the card */
+  top: -10px; /* Slightly outside the card at the top */
+  right: -10px; /* Slightly outside the card at the right */
+  background: #ff8c42; /* Orange color */
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 5px 10px; /* Padding for better appearance */
+  border-radius: 50%; /* Circular shape */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.pricing-card {
+  position: relative; /* Ensure the "New" badge is positioned relative to the card */
+}
+
+/* Experts Section Styling */
+.experts-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.experts-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.experts-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between cards */
+  flex-wrap: wrap; /* Wrap items for responsiveness */
+}
+
+.expert-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Card width */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.expert-card:hover {
+  transform: translateY(-5px); /* Subtle hover effect */
+}
+
+.expert-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 15px;
+}
+
+.expert-card h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.expert-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.rating {
+  font-size: 1.1rem;
+  color: #f4b400; /* Gold color for stars */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experts-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Sixth Page - Featured Products Section */
+.featured-section {
+  text-align: center;
+  background-color: #FFE4D9; /* Light gray background */
+  padding: 60px 20px; /* Vertical and horizontal padding */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.featured-section .section-advice {
+  color: #ff7a00; /* Highlight color for 'Practice Advice' */
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.featured-section .section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333; /* Dark gray for heading */
+  margin: 10px 0;
+}
+
+.featured-section .section-description {
+  font-size: 16px;
+  color: #555; /* Slightly muted text */
+  max-width: 600px;
+  margin: 0 auto 30px; /* Center align with spacing */
+  line-height: 1.6;
+}
+
+.subscribe-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Spacing between input and button */
+  flex-wrap: wrap;
+}
+
+.subscribe-box .email-input {
+  width: 300px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.subscribe-box .email-input:focus {
+  border-color: #ff7a00; /* Highlight border on focus */
+}
+
+.subscribe-box .subscribe-button {
+  background-color: #ff7a00; /* Orange button */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-box .subscribe-button:hover {
+  background-color: #e66900; /* Slightly darker orange on hover */
+}
+
+/* Footer Section */
+.footer {
+  background-color: #fff; /* White background */
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer-column {
+  margin: 20px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+  color: #777;
+  font-size: 14px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
