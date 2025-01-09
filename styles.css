@@ -37,12 +37,16 @@ header .buttons a {
   margin-left: 10px;
   padding: 10px 15px;
   border-radius: 5px;
-  color: white;
   background: #007bff;
 }
 
+header .buttons .login{
+  color: white;
+}
+
 header .buttons .join {
-  background: #28a745;
+  color: blue;
+  background: #f0f3f1;
 }
 
 header .buttons a:hover {
@@ -69,19 +73,21 @@ header .buttons a:hover {
 }
 
 .hero .buttons a {
+  text-decoration: none;
   display: inline-block;
   margin-right: 10px;
   padding: 10px 20px;
-  color: white;
   border-radius: 5px;
 }
 
 .hero .quote {
+  color: white;
   background: #007bff;
 }
 
 .hero .learn {
-  background: #28a745;
+  color: blue;
+  background: white;
 }
 
 /* Cards Section */
@@ -157,26 +163,10 @@ header .buttons a:hover {
   color: #0056b3;
 }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-  .packages {
-    flex-direction: column; /* Stack image and text vertically */
-    text-align: center;
-  }
-
-  .packages .image-container img {
-    width: auto; /* Scale image dynamically */
-    height: auto;
-  }
-
-  .packages .text-container {
-    text-align: center; /* Center-align text on smaller screens */
-  }
-}
-
 /* Third Page: Education Section */
 .education header {
-  text-align: center;
+  display: flex;
+  text-align: left;
   padding: 20px;
 }
 
@@ -229,12 +219,13 @@ header .buttons a:hover {
 }
 
 .course-card .badge {
+  font-size: 18px;
   position: absolute;
   top: 10px;
   left: 10px;
   background: #ff4d4d;
   color: white;
-  padding: 3px 8px;
+  padding: 5px 10px;
   border-radius: 3px;
 }
 
@@ -245,9 +236,12 @@ header .buttons a:hover {
 }
 
 .course-card .details {
+  font-weight: bold;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 10px 10px;
 }
 
 .course-card .price {
@@ -256,16 +250,18 @@ header .buttons a:hover {
 }
 
 .course-card button {
+  font-size: 15px;
+  font-weight: bold;
   background: white;
-  color: #007bff;
+  color: rgb(85, 85, 238);
   border: none;
-  padding: 10px 20px;
-  border-radius: 37px;
+  padding: 20px 30px;
+  border-radius: 30px;
   cursor: pointer;
 }
 
 .course-card button:hover {
-  background: lightblue; /* light blue on button hover */
+  background: rgb(175, 219, 235); /* light blue on button hover */
 }
 
 /* Courses Row Styles */
@@ -384,23 +380,11 @@ header .buttons a:hover {
   background: #0056b3;
 }
 
-/* Responsive Design for Fourth Page */
-@media (max-width: 768px) {
-  .learning-paths .paths-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .learning-path {
-    width: 90%; /* Adjust card width on smaller screens */
-  }
-}
-
 /* Fourth Page: Pricing Section */
 .pricing-section {
   padding: 50px 20px;
   background-color: #f4faff;
-  text-align: center;
+  text-align: left;
 }
 
 .pricing-section header {
@@ -429,7 +413,7 @@ header .buttons a:hover {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  text-align: left;
   padding: 20px;
   width: 300px;
   position: relative;
@@ -504,27 +488,15 @@ header .buttons a:hover {
   background: #0056b3;
 }
 
-/* Responsive Design for Pricing Section */
-@media (max-width: 768px) {
-  .pricing-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pricing-card {
-    width: 90%; /* Adjust card width on smaller screens */
-  }
-}
-/* Add this to your existing style.css */
 .new-badge {
   position: absolute; /* Position it relative to the card */
-  top: -10px; /* Slightly outside the card at the top */
-  right: -10px; /* Slightly outside the card at the right */
+  top: 0px; /* Slightly outside the card at the top */
+  right: 0px; /* Slightly outside the card at the right */
   background: #ff8c42; /* Orange color */
   color: white;
   font-size: 0.9rem;
   font-weight: bold;
-  padding: 5px 10px; /* Padding for better appearance */
+  padding: 18px 10px; /* Padding for better appearance */
   border-radius: 50%; /* Circular shape */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
@@ -597,14 +569,6 @@ header .buttons a:hover {
 .rating {
   font-size: 1.1rem;
   color: #f4b400; /* Gold color for stars */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .experts-wrapper {
-    flex-direction: column;
-    gap: 20px;
-  }
 }
 
 /* Sixth Page - Featured Products Section */
@@ -736,4 +700,53 @@ header .buttons a:hover {
   margin-top: 20px;
   font-size: 14px;
   color: #777;
+}
+/*RESPONSIVE DESIGNS */
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .packages {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center;
+  }
+
+  .packages .image-container img {
+    width: auto; /* Scale image dynamically */
+    height: auto;
+  }
+
+  .packages .text-container {
+    text-align: center; /* Center-align text on smaller screens */
+  }
+}
+
+/* Responsive Design for Fourth Page */
+@media (max-width: 768px) {
+  .learning-paths .paths-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .learning-path {
+    width: 90%; /* Adjust card width on smaller screens */
+  }
+}
+
+/* Responsive Design for Pricing Section */
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 90%; /* Adjust card width on smaller screens */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experts-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
